@@ -8,9 +8,15 @@ public class Main {
             String s = input.readString();
             magic.shoot(s);
             if (magic.wins()){
+                System.out.println(magic);
                 System.out.println("You win");
                 gameOver = true;
 
+            }else{
+                if(magic.looses()){
+                    System.out.println("You lose. The hidden word was : " + magic.getHiddenword());
+                    gameOver = true;
+                }
             }
         }
     }
